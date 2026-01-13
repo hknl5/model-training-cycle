@@ -8,7 +8,7 @@ This document explains the complete training cycle of machine learning models.
 
 ## Steps of Model Training
 
-### Step 1: Weight Initialization
+#### Step 1: Weight Initialization
 
 We start with training the model because **the model has random weights and knows absolutely nothing about the task**. We must expose it to data so it can learn patterns.
 
@@ -16,7 +16,7 @@ Think of this as a student walking into their first day of class with no prior k
 
 
 
-### Step 2: Forward Pass (Prediction)
+#### Step 2: Forward Pass (*Prediction*)
 
 The model then makes predictions because **learning only happens when we compare what it thinks with what is actually correct**.
 
@@ -24,7 +24,7 @@ This is the model's attempt at solving the problem based on its current understa
 
 
 
-### Step 3: Loss per Sample
+#### Step 3: Loss per Sample
 
 We calculate the loss for each data point because **each example carries its own error**. Without measuring individual mistakes, the model has no feedback.
 
@@ -32,18 +32,18 @@ Every single prediction gets evaluated independently to understand where the mod
 
 
 
-### Step 4: Cost Function (Batch Loss)
+#### Step 4: Cost Function (*Batch Loss*)
 
 We take the **average of all losses in a batch** to get a single scalar called the **cost**. This is what the optimizer will minimize.
 
-#### Example
+##### Example
 If a batch has 32 samples, the cost = mean(loss₁, loss₂, ..., loss₃₂)
 
 > **Why?** The optimizer cannot work with thousands of separate errors; it needs one scalar value to minimize.
 
 
 
-### Step 5: Backpropagation (Gradient Computation)
+#### Step 5: Backpropagation (*Gradient Computation*)
 
 Now we perform backpropagation because **we need to know which weights caused how much error**.
 
@@ -53,7 +53,7 @@ Backpropagation uses the **chain rule** to compute derivatives of the cost with 
 
 
 
-### Step 6: Optimization Step (Parameter Update)
+#### Step 6: Optimization Step (*Parameter Update*)
 
 After that, the optimizer updates the weights because **derivatives alone do nothing**.
 
@@ -64,7 +64,7 @@ The optimizer takes the gradients and actually moves the weights a small step in
 
 
 
-### Step 7: Training Loop / Iterative Learning
+#### Step 7: Training Loop / Iterative Learning
 
 We repeat this entire cycle many times because **the model does not find the optimal solution in one step**.
 
