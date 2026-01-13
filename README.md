@@ -1,5 +1,3 @@
-# Model Training Cycle
-
 ## Understanding How Neural Networks Learn
 
 This document explains the complete training cycle of machine learning models.
